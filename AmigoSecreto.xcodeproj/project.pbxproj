@@ -14,6 +14,7 @@
 		539185EF259522AD009D239F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 539185EE259522AD009D239F /* Assets.xcassets */; };
 		539185F2259522AD009D239F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 539185F0259522AD009D239F /* LaunchScreen.storyboard */; };
 		53A4272D25958E660005BE50 /* FriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A4272C25958E660005BE50 /* FriendsViewController.swift */; };
+		53C9EABE2596437D00678008 /* GroupsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C9EABD2596437D00678008 /* GroupsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		539185F1259522AD009D239F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		539185F3259522AD009D239F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		53A4272C25958E660005BE50 /* FriendsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsViewController.swift; sourceTree = "<group>"; };
+		53C9EABD2596437D00678008 /* GroupsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				539185F0259522AD009D239F /* LaunchScreen.storyboard */,
 				539185F3259522AD009D239F /* Info.plist */,
 				53A4272C25958E660005BE50 /* FriendsViewController.swift */,
+				53C9EABD2596437D00678008 /* GroupsViewController.swift */,
 			);
 			path = AmigoSecreto;
 			sourceTree = "<group>";
@@ -144,6 +147,7 @@
 				539185EA259522AA009D239F /* ShuffleViewController.swift in Sources */,
 				539185E6259522AA009D239F /* AppDelegate.swift in Sources */,
 				539185E8259522AA009D239F /* SceneDelegate.swift in Sources */,
+				53C9EABE2596437D00678008 /* GroupsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

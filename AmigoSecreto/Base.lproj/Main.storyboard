@@ -115,7 +115,7 @@
         <!--Amigo Secreto-->
         <scene sceneID="Te4-1F-qUe">
             <objects>
-                <viewController id="21n-DQ-Seb" sceneMemberID="viewController">
+                <viewController id="21n-DQ-Seb" customClass="GroupsViewController" customModule="AmigoSecreto" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LwJ-pz-iAy">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -140,14 +140,11 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="EXE-7b-twl" kind="show" id="022-Ki-AWT"/>
-                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
-                                    <outlet property="dataSource" destination="EXE-7b-twl" id="Ish-FA-4ga"/>
-                                    <outlet property="delegate" destination="EXE-7b-twl" id="5oE-2t-r9i"/>
+                                    <outlet property="dataSource" destination="21n-DQ-Seb" id="RyM-5v-v7v"/>
+                                    <outlet property="delegate" destination="21n-DQ-Seb" id="5kf-lY-Uxm"/>
                                 </connections>
                             </tableView>
                         </subviews>
@@ -161,15 +158,16 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Amigo Secreto" id="leI-5e-Xue">
-                        <rightBarButtonItems>
-                            <barButtonItem style="done" systemItem="done" id="fkf-Mz-at1"/>
-                            <barButtonItem systemItem="add" id="Eo7-pg-vPm">
-                                <connections>
-                                    <action selector="addFriend:" destination="EXE-7b-twl" id="ebv-Ap-fnt"/>
-                                </connections>
-                            </barButtonItem>
-                        </rightBarButtonItems>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Eo7-pg-vPm">
+                            <connections>
+                                <action selector="addGroup:" destination="21n-DQ-Seb" id="mRm-9V-PFV"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="dZK-a4-NMb" id="GNl-wG-8sT"/>
+                        <segue destination="EXE-7b-twl" kind="show" identifier="GroupsSegue" id="gqo-x9-HGC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZE7-EQ-xhJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -221,7 +219,6 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Amigo Secreto" id="WEN-wr-EbW">
-                        <barButtonItem key="leftBarButtonItem" systemItem="bookmarks" id="gic-zY-3Gc"/>
                         <rightBarButtonItems>
                             <barButtonItem style="done" systemItem="done" id="E7k-ZN-110">
                                 <connections>

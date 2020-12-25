@@ -21,6 +21,7 @@ final class FriendsViewController: UIViewController, UITableViewDataSource, UITa
 
         if let nextViewController = segue.destination as? ShuffleViewController {
             nextViewController.setup(names: friends)
+            nextViewController.title = title
         }
     }
 
@@ -63,7 +64,7 @@ final class FriendsViewController: UIViewController, UITableViewDataSource, UITa
     // MARK: UITableViewDelegate conforms
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let alertController = UIAlertController(title: "Novo Participante", message: "Qual o nome do amigo?", preferredStyle: .alert)
+        let alertController = UIAlertController(title: "Participante", message: "Qual o nome do amigo?", preferredStyle: .alert)
         let oldName = friends[indexPath.row]
 
         alertController.addTextField { newTextField in
