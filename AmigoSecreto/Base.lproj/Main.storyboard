@@ -92,7 +92,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1680" y="72"/>
+            <point key="canvasLocation" x="1548" y="72"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="iZm-HF-8tZ">
@@ -158,6 +158,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Amigo Secreto" id="leI-5e-Xue">
+                        <barButtonItem key="leftBarButtonItem" enabled="NO" systemItem="edit" id="aYg-00-Sdp">
+                            <connections>
+                                <action selector="enterEditMode:" destination="21n-DQ-Seb" id="sYu-ru-VLO"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="Eo7-pg-vPm">
                             <connections>
                                 <action selector="addGroup:" destination="21n-DQ-Seb" id="mRm-9V-PFV"/>
@@ -165,6 +170,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="editBarButton" destination="aYg-00-Sdp" id="9RA-hZ-jzP"/>
                         <outlet property="tableView" destination="dZK-a4-NMb" id="GNl-wG-8sT"/>
                         <segue destination="EXE-7b-twl" kind="show" identifier="GroupsSegue" id="gqo-x9-HGC"/>
                     </connections>

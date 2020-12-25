@@ -9,6 +9,7 @@ import UIKit
 
 final class GroupsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var editBarButton: UIBarButtonItem!
 
     // MARK: Private variables
 
@@ -25,6 +26,10 @@ final class GroupsViewController: UIViewController, UITableViewDataSource, UITab
     }
 
     // MARK: IBActions
+
+    @IBAction func enterEditMode(_ sender: UIBarButtonItem) {
+        tableView.isEditing = !tableView.isEditing
+    }
 
     @IBAction func addGroup(_ sender: UIBarButtonItem) {
         let alertController = UIAlertController(title: "Novo Grupo", message: "Qual o nome do grupo?", preferredStyle: .alert)
@@ -66,19 +71,48 @@ final class GroupsViewController: UIViewController, UITableViewDataSource, UITab
         if editingStyle == .delete {
             groups.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
+            editBarButton.isEnabled = !groups.isEmpty
         }
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let group = groups[indexPath.row]
+        if tableView.isEditing {
+            let alertController = UIAlertController(title: "Grupo", message: "Qual o nome do grupo?", preferredStyle: .alert)
+            let oldName = groups[indexPath.row]
 
-        performSegue(withIdentifier: "GroupsSegue", sender: group)
+            alertController.addTextField { newTextField in
+                newTextField.placeholder = "Digite aqui o nome do grupo:"
+                newTextField.clearButtonMode = .whileEditing
+                newTextField.text = oldName
+            }
+
+            alertController.addAction(UIAlertAction(title: "Cancelar", style: .cancel))
+
+            alertController.addAction(
+                UIAlertAction(title: "Salvar", style: .default) { [self] action in
+                    if let textField = alertController.textFields?.first, textField.hasText, let name = textField.text {
+                        update(name: name, at: indexPath)
+                    }
+                }
+            )
+
+            present(alertController, animated: true) {
+                tableView.deselectRow(at: indexPath, animated: true)
+            }
+        } else {
+            let group = groups[indexPath.row]
+
+            performSegue(withIdentifier: "GroupsSegue", sender: group)
+        }
+
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 
     // MARK: Private functions
 
     private func add(name: String) {
         groups.insert(name, at: 0)
+        editBarButton.isEnabled = true
         tableView.reloadData()
     }
 
