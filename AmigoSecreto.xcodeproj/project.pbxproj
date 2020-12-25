@@ -9,21 +9,23 @@
 /* Begin PBXBuildFile section */
 		539185E6259522AA009D239F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539185E5259522AA009D239F /* AppDelegate.swift */; };
 		539185E8259522AA009D239F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539185E7259522AA009D239F /* SceneDelegate.swift */; };
-		539185EA259522AA009D239F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539185E9259522AA009D239F /* ViewController.swift */; };
+		539185EA259522AA009D239F /* ShuffleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539185E9259522AA009D239F /* ShuffleViewController.swift */; };
 		539185ED259522AA009D239F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 539185EB259522AA009D239F /* Main.storyboard */; };
 		539185EF259522AD009D239F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 539185EE259522AD009D239F /* Assets.xcassets */; };
 		539185F2259522AD009D239F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 539185F0259522AD009D239F /* LaunchScreen.storyboard */; };
+		53A4272D25958E660005BE50 /* FriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A4272C25958E660005BE50 /* FriendsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		539185E2259522AA009D239F /* AmigoSecreto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AmigoSecreto.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		539185E5259522AA009D239F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		539185E7259522AA009D239F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		539185E9259522AA009D239F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		539185E9259522AA009D239F /* ShuffleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShuffleViewController.swift; sourceTree = "<group>"; };
 		539185EC259522AA009D239F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		539185EE259522AD009D239F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		539185F1259522AD009D239F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		539185F3259522AD009D239F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		53A4272C25958E660005BE50 /* FriendsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,11 +60,12 @@
 			children = (
 				539185E5259522AA009D239F /* AppDelegate.swift */,
 				539185E7259522AA009D239F /* SceneDelegate.swift */,
-				539185E9259522AA009D239F /* ViewController.swift */,
+				539185E9259522AA009D239F /* ShuffleViewController.swift */,
 				539185EB259522AA009D239F /* Main.storyboard */,
 				539185EE259522AD009D239F /* Assets.xcassets */,
 				539185F0259522AD009D239F /* LaunchScreen.storyboard */,
 				539185F3259522AD009D239F /* Info.plist */,
+				53A4272C25958E660005BE50 /* FriendsViewController.swift */,
 			);
 			path = AmigoSecreto;
 			sourceTree = "<group>";
@@ -137,7 +140,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				539185EA259522AA009D239F /* ViewController.swift in Sources */,
+				53A4272D25958E660005BE50 /* FriendsViewController.swift in Sources */,
+				539185EA259522AA009D239F /* ShuffleViewController.swift in Sources */,
 				539185E6259522AA009D239F /* AppDelegate.swift in Sources */,
 				539185E8259522AA009D239F /* SceneDelegate.swift in Sources */,
 			);

@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  ShuffleViewController.swift
 //  AmigoSecreto
 //
 //  Created by Rafael Ferreira on 12/24/20.
@@ -7,24 +7,13 @@
 
 import UIKit
 
-final class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+final class ShuffleViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var numberTextField: UITextField!
 
     // MARK: Private variables
 
-    private var names: [String] = [
-        "Rafael Ferreira",
-        "Cleís Aurora",
-        "Elsie Aurora",
-        "Clício Ribas",
-        "Jairo Correa",
-        "Neiva Correa",
-        "Talita Correa",
-        "Cleber Augusto",
-        "Glauber Márcio",
-        "Érica Batista"
-    ]
+    private var names: [String] = []
 
     private var numberDiscovered: [Int] = []
 
@@ -66,6 +55,12 @@ final class ViewController: UIViewController, UITableViewDataSource, UITableView
         cell.detailTextLabel?.text = String(numberDiscovered[indexPath.row] + 1)
 
         return cell
+    }
+
+    // MARK: Functions
+
+    func setup(names: [String]) {
+        self.names = names
     }
 
     // MARK: Private functions

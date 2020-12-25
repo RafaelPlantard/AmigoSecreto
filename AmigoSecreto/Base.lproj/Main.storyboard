@@ -11,7 +11,7 @@
         <!--Amigo Secreto-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AmigoSecreto" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ShuffleViewController" customModule="AmigoSecreto" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -92,7 +92,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="886.95652173913049" y="71.651785714285708"/>
+            <point key="canvasLocation" x="1680" y="72"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="iZm-HF-8tZ">
@@ -105,12 +105,80 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="vko-dl-2Xp"/>
+                        <segue destination="EXE-7b-twl" kind="relationship" relationship="rootViewController" id="f9A-wx-ZS9"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="crL-yb-hjZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-23.188405797101453" y="71.651785714285708"/>
+        </scene>
+        <!--Amigo Secreto-->
+        <scene sceneID="cQt-PT-FRM">
+            <objects>
+                <viewController storyboardIdentifier="FriendsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="EXE-7b-twl" customClass="FriendsViewController" customModule="AmigoSecreto" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="H2T-LE-qiG">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelectionDuringEditing="YES" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="9Wz-Y1-qKf">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="NameTableViewIdentifier" editingAccessoryType="detailButton" textLabel="kdz-Ui-EbP" style="IBUITableViewCellStyleDefault" id="oEd-BB-liD">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="oEd-BB-liD" id="ZN8-4b-KQ6">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="kdz-Ui-EbP">
+                                                    <rect key="frame" x="20" y="0.0" width="374" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="EXE-7b-twl" id="uP5-Gv-721"/>
+                                    <outlet property="delegate" destination="EXE-7b-twl" id="tpe-ri-YZF"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="1A7-Oz-a9Q"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="9Wz-Y1-qKf" firstAttribute="top" secondItem="1A7-Oz-a9Q" secondAttribute="top" id="5GK-VP-Rf4"/>
+                            <constraint firstItem="9Wz-Y1-qKf" firstAttribute="leading" secondItem="1A7-Oz-a9Q" secondAttribute="leading" id="LzD-w9-YBQ"/>
+                            <constraint firstItem="9Wz-Y1-qKf" firstAttribute="bottom" secondItem="1A7-Oz-a9Q" secondAttribute="bottom" id="aR3-zA-tFt"/>
+                            <constraint firstItem="1A7-Oz-a9Q" firstAttribute="trailing" secondItem="9Wz-Y1-qKf" secondAttribute="trailing" id="ccV-hy-wBR"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Amigo Secreto" id="WEN-wr-EbW">
+                        <barButtonItem key="leftBarButtonItem" systemItem="bookmarks" id="gic-zY-3Gc"/>
+                        <rightBarButtonItems>
+                            <barButtonItem style="done" systemItem="done" id="E7k-ZN-110">
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="yXq-YM-jg8"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem systemItem="add" id="6gD-aq-psk">
+                                <connections>
+                                    <action selector="addFriend:" destination="EXE-7b-twl" id="Ogt-x0-pM2"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="9Wz-Y1-qKf" id="eqx-7U-UuK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zh5-kd-b4t" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="828" y="72"/>
         </scene>
     </scenes>
     <resources>
