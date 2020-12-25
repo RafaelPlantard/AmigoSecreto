@@ -9,6 +9,7 @@ import UIKit
 
 final class FriendsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var doneBarButton: UIBarButtonItem!
 
     // MARK: Private variables
 
@@ -99,11 +100,13 @@ final class FriendsViewController: UIViewController, UITableViewDataSource, UITa
 
     private func add(name: String) {
         friends.insert(name, at: 0)
+        doneBarButton.isEnabled = true
         tableView.reloadData()
     }
 
     private func update(name: String, at indexPath: IndexPath) {
         friends[indexPath.row] = name
+        doneBarButton.isEnabled = !friends.isEmpty
         tableView.reloadRows(at: [indexPath], with: .fade)
     }
 }

@@ -226,7 +226,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Amigo Secreto" id="WEN-wr-EbW">
                         <rightBarButtonItems>
-                            <barButtonItem style="done" systemItem="done" id="E7k-ZN-110">
+                            <barButtonItem enabled="NO" style="done" systemItem="done" id="E7k-ZN-110">
                                 <connections>
                                     <segue destination="BYZ-38-t0r" kind="show" id="yXq-YM-jg8"/>
                                 </connections>
@@ -239,6 +239,7 @@
                         </rightBarButtonItems>
                     </navigationItem>
                     <connections>
+                        <outlet property="doneBarButton" destination="E7k-ZN-110" id="KaW-Sx-GHY"/>
                         <outlet property="tableView" destination="9Wz-Y1-qKf" id="eqx-7U-UuK"/>
                     </connections>
                 </viewController>
